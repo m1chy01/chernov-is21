@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function sum(obj)
+{
+let a1 = Number(obj.num1.value);
+let a2 = Number(obj.num2.value);
+let per = (a1+a2)*2;
+let pl = a1*a2;
+let m = 'Периметр: '+ per + '<br>'+'Площадь: '+ pl;
+document.write(m)
+}
+</script>
+<form name="form1" style="text-align: center;">
+<pre>
+a:  <input type="text" name = 'num1'><br><br>
+b:  <input type="text" name="num2"><br><br>
+<input type="button" value="Вычислить" onclick="sum(form1)"><br></form>
+</pre>
+<br><br>
+</body>
+</html>

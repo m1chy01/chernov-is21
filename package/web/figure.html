@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Aform example</title>
+</head>
+<body>
+ <form name="aform">
+  <label for="geometry">Геометрическая фигура:</label>
+  <input type="text" id="geometry" name="geometry"><br><br>
+  <label for="color">Цвет:</label>
+  <input type="text" id="color" name="color"><br><br>
+  <input type="button" value="Submit" onClick="showPopUp()">
+ </form>
+
+ <script>
+  function showPopUp() {
+   let geometry = document.getElementById("geometry").value;
+   let color = document.getElementById("color").value;
+
+   if(color && geometry) {
+    let popUp = "1. Мне нравится " + color + ' ' + geometry;
+    popUp += "2. Длина (length) фигуры: "  + geometry.length;
+    window.alert(popUp);
+   }
+  }
+ </script>
+</body>
+</html>

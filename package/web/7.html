@@ -1,0 +1,15 @@
+<script>
+    function call1(ques, yes, no) {
+            if (confirm(ques)) yes()
+            else no();
+        }
+        function callYes() {
+            if (x <= 0) console.log(4*x)
+            else console.log(x ** 3)
+        }
+        function callNo() {
+            alert('Отказ от задания')
+        }
+        x = prompt('Введите x: ')
+        call1('Решаем? ', callYes, callNo)
+</script>

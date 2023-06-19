@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function asd(obj)
+    {
+        z = Number(document.form1.num1.value)
+        switch(z)
+        {
+            case 3:
+                obj.num2.value = '168 рублей';
+                break;
+            case 6:
+                obj.num2.value = '312 рублей';
+                break;
+            case 12:
+                obj.num2.value = '540 рублей';
+                break;
+            default:
+                obj.num2.value = obj.num1.value * 60 + ' рублей'
+        }
+    }
+</script>
+<pre><h2>         Вычисление стоимости подписки</h2>
+    <form name="form1" style="text-align: left;">
+        Введите срок подписного периода:  <input type="text" name = 'num1'>
+        <input type="button" value="Определить" onclick="asd(form1)">
+        Стоимость подписки:  <input type="text" name = "num2">
+        <input type="reset" value="Сбросить" onclick="">
+    </form></pre>
+</body>
+</html>

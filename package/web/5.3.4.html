@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+//сумма за квартал, налог и сумма, выдаваемая на руки
+function finals(){
+    let jan = +document.form1.num1.value;
+    let feb = +document.form1.num2.value;
+    let mar = +document.form1.num3.value;
+    let summ = jan + feb + mar;
+    let nalog = summ*13/100;
+    let sum2 = summ - nalog;
+    document.form1.sum1.value = summ
+    document.form1.nal.value = nalog
+    document.form1.sum2.value = sum2
+}
+</script>
+<h4>Определение данных за квартал</h4>
+<form name = "form1" style="text-align: center;">
+<p>Введите суммы за каждый месяц и нажмите <b>Вычислить</b></p>
+<pre>
+январь:<input type="text" name="num1" size="10"><br>
+февраль:<input type="text" name="num2" size="10"><br>
+март:<input type="text" name="num3" size="10"><br>
+<input type="button" value="Вычислить" onClick = "finals(form1)"><br>
+сумма за квартал:<input type="text" name="sum1" size="10"><br>
+налог:<input type="text" name="nal" size="10"><br>
+сумма, выдаваемая на руки:<input type="text" name="sum2" size="10"><br>
+</pre>
+</form>
+<input type="reset">

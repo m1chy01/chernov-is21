@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>KT4_3</title>
+</head>
+<body>
+    <script>
+        let styles = ["Джаз", "Блюз"];
+        styles.push("Рок-н-ролл");
+        styles.shift();
+        styles.unshift("Рэп", "Регги");
+        console.log(styles); // ["Рэп", "Регги", "Блюз", "Рок-н-ролл"]
+        
+        let arr = [3, 1, 7, 5, 8, 2, 4];
+        let diff = 0;
+        for(let i = 1; i < arr.length; i++){
+            diff += Math.abs(arr[i] - arr[i-1]); //находим разницу между текущим и предыдущим элементами массива и складываем
+        }
+        console.log(diff);
+    </script>
+</body>

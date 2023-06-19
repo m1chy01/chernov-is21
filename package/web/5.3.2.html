@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+   function fact(n)
+{
+    let result = 1
+    while(n) result *= n--
+    return result
+}
+   function sum(obj)
+{
+let a1 = Number(obj.num1.value);
+let a2 = Number(obj.num2.value);
+let result = 1
+    asd = 0
+    for(i=+a1;i<+a2+1;i++){
+        if(i%2!=0){
+           asd += +fact(i)
+        }
+    }
+let m = 'Сумма факториалов всех нечетных чисел: ' + asd
+document.write(m)
+}
+</script>
+<form name="form1" style="text-align: center;">
+<pre>
+Первый предел:  <input type="text" name = 'num1'><br><br>
+Второй предел:  <input type="text" name = "num2"><br><br>
+<input type="button" value="Вычислить" onclick="sum(form1)"><br></form>
+</pre>
+<br><br>
+</body>
+</html>

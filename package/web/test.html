@@ -1,0 +1,35 @@
+<form>
+    <label for="name">Введите имя:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label>Что больше нравится:</label><br><br>
+    <input type="radio" id="icecream" name="preference" value="icecream" required>
+    <label for="icecream">Мороженое</label><br>
+    <input type="radio" id="chocolate" name="preference" value="chocolate" required>
+    <label for="chocolate">Шоколад</label><br><br>
+    <label for="feedback">Ваш отзыв:</label><br><br>
+    <textarea id="feedback" name="feedback" rows="5" cols="30" required></textarea><br><br>
+    <button type="submit" onclick="showConfirmation()">Отправить</button>
+  </form>
+  <script>
+    function showConfirmation() {
+    event.preventDefault();
+    var name = document.getElementById("name").value;
+    var preference = document.querySelector('input[name="preference"]:checked').value;
+    var feedback = document.getElementById("feedback").value;
+  
+    if (name === "") {
+      alert("Внимательно введите ваше имя!");
+      return;
+    }
+  
+    var chosen = "";
+    if (preference === "icecream") {
+      chosen = "мороженое";
+    } else {
+      chosen = "шоколад";
+    }
+  
+    var message = "Спасибо, " + name + "! Вы выбрали " + chosen + " и написали следующий отзыв: " + feedback;
+    alert(message);
+  }
+  </script>

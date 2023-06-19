@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>KT4_1</title>
+</head>
+<body>
+    <script>
+      let deposit = prompt("Введите сумму вклада:");
+
+      if (deposit < 50000) {
+          document.write("Процентная ставка составит 4%")
+      } else if (deposit >= 50000 && deposit < 100000) {
+          document.write("Процентная ставка составит 5%")
+      } else if (deposit >= 100000 && deposit < 150000) {
+          document.write("Процентная ставка со скидкой составит 6%")
+      } else {
+          document.write("Процентная ставка составит 7%")
+      }
+    </script>
+</body>
